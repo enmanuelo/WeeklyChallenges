@@ -58,25 +58,17 @@ namespace ChallengesWithTestsMark8
         public int SumEvens(int[] numbers)
         {
             return numbers == null || numbers.Count() == 0 ? 0 : numbers.Where(x => x % 2 == 0).Sum();
-            //int sum = 0;
-            //foreach (var num in numbers)
-            //{
-            //    if (num % 2 == 0)
-            //    {
-            //        sum += num;
-            //    }
-            //}
-            //return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            int sum = 0;
-            foreach (var num in numbers)
-            {
-                sum += num;
-            }
-            return sum % 2 != 0;
+            return numbers == null || numbers.Count() == 0 ? false : numbers.Sum() % 2 != 0;
+            //int sum = 0;
+            //foreach (var num in numbers)
+            //{
+            //    sum += num;
+            //}
+            //return sum % 2 != 0;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)

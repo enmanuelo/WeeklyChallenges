@@ -35,7 +35,7 @@ namespace ChallengesWithTestsMark8
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
 
-            return numbers.Min(x => x) + numbers.Max(x => x);
+            return numbers == null || numbers.Count() == 0? 0 : numbers.Min() + numbers.Max();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -52,25 +52,21 @@ namespace ChallengesWithTestsMark8
 
         public int Sum(int[] numbers)
         {
-            int sum = 0;
-            foreach (var num in numbers)
-            {
-                sum++;
-            }
-            return sum;
+            return numbers == null || numbers.Count() == 0 ? 0 : numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
         {
-            int sum = 0;
-            foreach (var num in numbers)
-            {
-                if (num % 2 == 0)
-                {
-                    sum += num;
-                }
-            }
-            return sum;
+            return numbers == null || numbers.Count() == 0 ? 0 : numbers.Where(x => x % 2 == 0).Sum();
+            //int sum = 0;
+            //foreach (var num in numbers)
+            //{
+            //    if (num % 2 == 0)
+            //    {
+            //        sum += num;
+            //    }
+            //}
+            //return sum;
         }
 
         public bool IsSumOdd(List<int> numbers)

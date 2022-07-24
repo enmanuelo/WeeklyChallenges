@@ -63,25 +63,19 @@ namespace ChallengesWithTestsMark8
         public bool IsSumOdd(List<int> numbers)
         {
             return numbers == null || numbers.Count() == 0 ? false : numbers.Sum() % 2 != 0;
-            //int sum = 0;
-            //foreach (var num in numbers)
-            //{
-            //    sum += num;
-            //}
-            //return sum % 2 != 0;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            int sum = 0;
+            int count = 0;
             for (int i = 0; i < number; i++)
             {
                 if (i % 2 != 0)
                 { 
-                    sum += i;
+                    count++;
                 }
             }
-            return sum;
+            return count;
         }
     }
 }

@@ -68,7 +68,7 @@ namespace ChallengesWithTestsMark8
 
         public char GetLastLetterOfString(string val)
         {
-            return val[val.Length - 1];
+            return val[^1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
@@ -78,20 +78,21 @@ namespace ChallengesWithTestsMark8
 
         public int LastMinusFirst(int[] nums)
         {
-            return nums[nums.Length - 1] - nums[0];
+            return nums[^1] - nums[0];
         }
 
         public int[] GetOddsBelow100()
         {
-            var numbers = new List<int>();
-            for (int i = 0; i < 100; i++)
-            {
-                if (i % 2 != 0)
-                {
-                    numbers.Add(i);
-                }
-            }
-            return numbers.ToArray();
+            //var numbers = new List<int>();
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    if (i % 2 != 0)
+            //    {
+            //        numbers.Add(i);
+            //    }
+            //}
+            //return numbers.ToArray();
+            return Enumerable.Range(1, 100).Where(x => x % 2 != 0).ToArray();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)

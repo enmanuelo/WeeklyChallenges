@@ -6,7 +6,9 @@ namespace ChallengesWithTestsMark8
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
+            // Inline If
             return (num1 == num2) ? true : false;
+            // If else statement
             //if(num1 == num2)
             //{
             //    return true;
@@ -29,14 +31,18 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            if (number1 < number2)
-            {
-                return number1;
-            }
-            else
-            {
-                return number2;
-            }
+            // Inline if
+            return (number1 < number2) ? number1 : number2;
+
+            // If else statement
+            //if (number1 < number2)
+            //{
+            //    return number1;
+            //}
+            //else
+            //{
+            //    return number2;
+            //}
         }
 
         public long Multiply(long factor1, long factor2)

@@ -65,7 +65,7 @@ namespace ChallengesWithTestsMark8
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            return int.TryParse(input, out int i) || double.TryParse(input, out double d);
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)

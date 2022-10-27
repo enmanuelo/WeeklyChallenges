@@ -57,7 +57,10 @@ namespace ChallengesWithTestsMark8
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            var criteriaOne = sideLength1 + sideLength2 > sideLength3;
+            var criteriaTwo = sideLength1 + sideLength3 > sideLength2;
+            var criteriaThree = sideLength2 + sideLength3 > sideLength1;
+            return (criteriaOne && criteriaTwo && criteriaThree);
         }
 
         public bool IsStringANumber(string input)

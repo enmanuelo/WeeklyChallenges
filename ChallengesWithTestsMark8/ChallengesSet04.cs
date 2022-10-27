@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ChallengesWithTestsMark8
 {
@@ -83,12 +84,26 @@ namespace ChallengesWithTestsMark8
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            var evenNums = new List<int>();
+            var total = 0;
+            foreach (int num in numbers)
+            {
+                if (num % 2 == 0)
+                {
+                    evenNums.Add(num);
+                    total += num;
+                }
+            }
+            return (evenNums.Count > 0 && numbers != null) ? total / (double)evenNums.Count : 0;
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            if (number == 1)
+            {
+                return 1;
+            }
+            return number * Factorial(number - 1);
         }
     }
 }

@@ -8,15 +8,8 @@ namespace ChallengesWithTestsMark8
         {
             var sum = 0;
             foreach (var num in numbers)
-            {                
-                if (num % 2 == 0)
-                {
-                    sum += num;
-                }
-                else
-                {
-                    sum -= num;
-                }
+            {
+                sum = (num % 2 == 0) ? (sum + num) : (sum - num);
             }
             return sum;
         }
@@ -59,7 +52,7 @@ namespace ChallengesWithTestsMark8
 
         public void ChangeBusinessNameTo_TrueCoders(Business biz)
         {
-            throw new NotImplementedException();
+            biz.Name = "TrueCoders";
         }
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)

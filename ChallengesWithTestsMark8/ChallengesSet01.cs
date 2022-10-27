@@ -6,7 +6,7 @@ namespace ChallengesWithTestsMark8
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            // Inline If
+            // Inline if / ternary operator
             return (num1 == num2) ? true : false;
             // If else statement
             //if(num1 == num2)
@@ -31,7 +31,7 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            // Inline if
+            // Inline if / ternary operator
             return (number1 < number2) ? number1 : number2;
 
             // If else statement
@@ -52,14 +52,18 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            if (nameOfPerson == "")
-            {
-                return "Hello!";
-            }
-            else
-            {
-                return $"Hello, {nameOfPerson}!";
-            }
+            // Inline if / ternary operator
+            return (nameOfPerson == "") ? "Hello!" : $"Hello, {nameOfPerson}!";
+
+            // If else statement
+            //if (nameOfPerson == "")
+            //{
+            //    return "Hello!";
+            //}
+            //else
+            //{
+            //    return $"Hello, {nameOfPerson}!";
+            //}
         }
 
         public string GetHey()
